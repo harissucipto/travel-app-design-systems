@@ -1,28 +1,28 @@
-import React, { FC } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import classNames from "classnames";
 
-interface IButtonItem {
-  value: string;
+interface IButtonItem<T> {
+  value: T;
   content: React.ReactNode;
 }
 
-export interface ButtonGroupProps {
-  options: IButtonItem[];
-  activeOption: string;
-  setActiveOption: (activeOption: string) => void;
+export interface ButtonGroupProps<T> {
+  options: IButtonItem<T>[];
+  activeOption: T;
+  setActiveOption: Dispatch<SetStateAction<T>>;
 }
 
-export const ButtonGroup: FC<ButtonGroupProps> = ({
+export const ButtonGroup = <T extends unknown>({
   options,
   activeOption,
   setActiveOption,
-}) => {
+}: ButtonGroupProps<T>) => {
   return (
     <>
       {options.map((option, index) => {
         return (
           <button
-            key={option.value}
+            key={option.value as string}
             className={classNames(
               "inline-flex whitespace-nowrap items-center h-10 px-4 font-medium text-sm focus:outline-none hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-white border border-gray-300 dark:border-gray-500 ",
               {

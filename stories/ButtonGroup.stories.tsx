@@ -19,7 +19,7 @@ const meta: Meta = {
 
 export default meta;
 
-interface Props extends ButtonGroupProps {
+interface Props extends ButtonGroupProps<string> {
   darkMode: boolean;
 }
 
@@ -35,38 +35,26 @@ const StoryButtonGroup: Story<Props> = (args) => {
 
   const [viewOption, setViewOption] = React.useState<ViewOption>("list");
 
-  const handleActiveItem1 = (value: string) => {
-    setActiveItem1(value);
-  };
-
-  const handleActiveItem2 = (value: string) => {
-    setActiveItem2(value);
-  };
-
-  const handleViewOption = (value: string) => {
-    setViewOption(value as ViewOption);
-  };
-
   return (
     <StoryLayout {...args} className="space-y-4">
       <div>
         <ButtonGroup
           activeOption={activeItem1}
-          setActiveOption={handleActiveItem1}
+          setActiveOption={setActiveItem1}
           options={options1}
         />
       </div>
       <div>
         <ButtonGroup
           activeOption={activeItem2}
-          setActiveOption={handleActiveItem2}
+          setActiveOption={setActiveItem2}
           options={options2}
         />
       </div>
       <div>
         <ButtonGroup
           activeOption={viewOption}
-          setActiveOption={handleViewOption}
+          setActiveOption={setViewOption}
           options={[
             {
               content: <FiList size={20} />,
