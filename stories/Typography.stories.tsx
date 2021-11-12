@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 
 import { Typography, TypographyProps } from "../src";
 import { Figma } from "../src/data";
-import StoryLayout from "./StoryLayout";
+import { StoryLayout } from "./StoryLayout";
 
 const meta: Meta = {
   title: "Typography",

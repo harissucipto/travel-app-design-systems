@@ -11,7 +11,7 @@ interface IStoryArgs {
   noPadding?: boolean;
 }
 
-const StoryLayout = (args: IStoryArgs) => {
+export const StoryLayout = (args: IStoryArgs) => {
   return (
     <div className={classNames({ "dark bg-gray-900": args.darkMode }, "-m-4")}>
       <div className={classNames(args.className, { "p-4": !args.noPadding })}>
@@ -20,5 +20,3 @@ const StoryLayout = (args: IStoryArgs) => {
     </div>
   );
 };
-
-export default StoryLayout;
