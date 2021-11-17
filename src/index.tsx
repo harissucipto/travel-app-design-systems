@@ -7,3 +7,4 @@ export * from "./ButtonGroup";
 export * from "./Pagination";
 export * from "./Badge";
 export * from "./Button";
+export * from "./Select";
