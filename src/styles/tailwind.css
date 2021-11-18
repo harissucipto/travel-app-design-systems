@@ -166,4 +166,12 @@
   .btn-group {
     @apply inline-flex whitespace-nowrap items-center h-10 px-4 font-medium text-sm focus:outline-none hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-white border border-gray-300 dark:border-gray-500;
   }
+
+  /* Navigation */
+  .navItem {
+    @apply flex items-center w-full h-10 py-2 rounded-lg cursor-pointer 
+    text-md whitespace-nowrap select-none
+    transition-all duration-100 ease-out
+    hover:bg-primary-50 dark:hover:bg-gray-100 dark:hover:bg-opacity-10;
+  }
 }
