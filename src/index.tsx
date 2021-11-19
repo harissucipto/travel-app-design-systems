@@ -13,3 +13,5 @@ export * from "./TextInput";
 
 export * from "./nav/SideNav";
 export * from "./nav/MobileNavbar";
+
+export * from "./RentalCard";
